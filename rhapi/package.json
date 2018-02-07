@@ -1,12 +1,12 @@
 {
     "name": "rh-api",
-    "config":{
-      "port" : "8086"
+    "config": {
+        "port": "8086"
     },
     "version": "1.0.0",
     "dependencies": {
         "express": "~4.11.0",
-        "request": "~2.79.0",        
+        "request": "~2.79.0",
         "http-auth": "~3.2.3",
         "morgan": "~1.7.0"
     },
@@ -14,7 +14,7 @@
     "description": "Application Rh-api pour mettre en pratique les outils de test",
     "main": "server.js",
     "scripts": {
-	"prestart": "npm install",
-	"start": "node server.js"
+        "prestart": "npm install",
+        "start": "node server.js"
     }
 }

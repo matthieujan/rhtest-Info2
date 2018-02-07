@@ -1,9 +1,9 @@
 {
     "name": "rh-front",
-    "config":
-        { "port" : "8085",
-          "api": "http://localhost:8086"
-        },
+    "config": {
+        "port": "8085",
+        "api": "http://localhost:8086"
+    },
     "version": "1.0.0",
     "dependencies": {
         "express": "~4.11.0",
@@ -17,7 +17,7 @@
     "description": "Application pour mettre en pratique les outils de test",
     "main": "app.js",
     "scripts": {
-	"prestart": "npm install",
-	"start": "node app.js"
-}
+        "prestart": "npm install",
+        "start": "node app.js"
+    }
 }
