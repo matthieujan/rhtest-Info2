@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>Test ajout salarié</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cas ajout salarié nominal</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8085/salarie<datalist><option>http://localhost:8085/salarie</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=newid<datalist><option>id=newid</option><option>name=newid</option><option>css=#newid</option><option>//input[@id='newid']</option><option>//div[@id='menu']/form/div[2]/div/input</option><option>//div[2]/div/input</option></datalist></td><td>SAL3</td>
+</tr>
+<tr><td>type</td><td>id=newsalarie<datalist><option>id=newsalarie</option><option>name=newsalarie</option><option>css=#newsalarie</option><option>//input[@id='newsalarie']</option><option>//div[@id='menu']/form/div[4]/div/input</option><option>//div[4]/div/input</option></datalist></td><td>Bezancon</td>
+</tr>
+<tr><td>type</td><td>id=newlastname<datalist><option>id=newlastname</option><option>name=newlastname</option><option>css=#newlastname</option><option>//input[@id='newlastname']</option><option>//div[@id='menu']/form/div[4]/div[2]/input</option><option>//div[4]/div[2]/input</option></datalist></td><td>Felix</td>
+</tr>
+<tr><td>type</td><td>id=newlevel<datalist><option>id=newlevel</option><option>name=newlevel</option><option>css=#newlevel</option><option>//input[@id='newlevel']</option><option>//div[@id='menu']/form/div[6]/div/input</option><option>//div[6]/div/input</option></datalist></td><td>0</td>
+</tr>
+<tr><td>type</td><td>id=newsalary<datalist><option>id=newsalary</option><option>name=newsalary</option><option>css=#newsalary</option><option>//input[@id='newsalary']</option><option>//div[@id='menu']/form/div[6]/div[2]/input</option><option>//div[6]/div[2]/input</option></datalist></td><td>10000</td>
+</tr>
+<tr><td>clickAt</td><td>name=OP<datalist><option>name=OP</option><option>css=input[name="OP"]</option><option>//input[@name='OP']</option><option>//div[@id='menu']/form/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>61,20</td>
+</tr>
+<tr><td>verifyText</td><td>css=div.info<datalist><option>css=div.info</option><option>//div[@id='menu']/div[2]</option><option>//div[3]/div[2]</option></datalist></td><td>Le salarié a bien été ajouté</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cas même matricule</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8085/salarie<datalist><option>http://localhost:8085/salarie</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=newid<datalist><option>id=newid</option><option>name=newid</option><option>css=#newid</option><option>//input[@id='newid']</option><option>//div[@id='menu']/form/div[2]/div/input</option><option>//div[2]/div/input</option></datalist></td><td>SAL3</td>
+</tr>
+<tr><td>type</td><td>id=newsalarie<datalist><option>id=newsalarie</option><option>name=newsalarie</option><option>css=#newsalarie</option><option>//input[@id='newsalarie']</option><option>//div[@id='menu']/form/div[4]/div/input</option><option>//div[4]/div/input</option></datalist></td><td>Bezancon</td>
+</tr>
+<tr><td>type</td><td>id=newlastname<datalist><option>id=newlastname</option><option>name=newlastname</option><option>css=#newlastname</option><option>//input[@id='newlastname']</option><option>//div[@id='menu']/form/div[4]/div[2]/input</option><option>//div[4]/div[2]/input</option></datalist></td><td>Felix</td>
+</tr>
+<tr><td>type</td><td>id=newlevel<datalist><option>id=newlevel</option><option>name=newlevel</option><option>css=#newlevel</option><option>//input[@id='newlevel']</option><option>//div[@id='menu']/form/div[6]/div/input</option><option>//div[6]/div/input</option></datalist></td><td>0</td>
+</tr>
+<tr><td>type</td><td>id=newsalary<datalist><option>id=newsalary</option><option>name=newsalary</option><option>css=#newsalary</option><option>//input[@id='newsalary']</option><option>//div[@id='menu']/form/div[6]/div[2]/input</option><option>//div[6]/div[2]/input</option></datalist></td><td>10000</td>
+</tr>
+<tr><td>clickAt</td><td>name=OP<datalist><option>name=OP</option><option>css=input[name="OP"]</option><option>//input[@name='OP']</option><option>//div[@id='menu']/form/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>61,20</td>
+</tr>
+<tr><td>verifyText</td><td>css=div.alert<datalist><option>css=div.alert</option><option>//div[@id='menu']/div[2]</option><option>//div[3]/div[2]</option></datalist></td><td>Le matricule existe déjà</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cas seul matricule</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8085/salarie<datalist><option>http://localhost:8085/salarie</option></datalist></td><td></td>
+</tr>
+<tr><td>clickAt</td><td>id=newid<datalist><option>id=newid</option><option>name=newid</option><option>css=#newid</option><option>//input[@id='newid']</option><option>//div[@id='menu']/form/div[2]/div/input</option><option>//div[2]/div/input</option></datalist></td><td>102,15</td>
+</tr>
+<tr><td>type</td><td>id=newid<datalist><option>id=newid</option><option>name=newid</option><option>css=#newid</option><option>//input[@id='newid']</option><option>//div[@id='menu']/form/div[2]/div/input</option><option>//div[2]/div/input</option></datalist></td><td>SAL4</td>
+</tr>
+<tr><td>clickAt</td><td>name=OP<datalist><option>name=OP</option><option>css=input[name="OP"]</option><option>//input[@name='OP']</option><option>//div[@id='menu']/form/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>54,17</td>
+</tr>
+<tr><td>verifyText</td><td>css=div.info<datalist><option>css=div.info</option><option>//div[@id='menu']/div[2]</option><option>//div[3]/div[2]</option></datalist></td><td>Le salarié a bien été ajouté</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Cas pas de matricule</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8085/salarie<datalist><option>http://localhost:8085/salarie</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=newsalarie<datalist><option>id=newsalarie</option><option>name=newsalarie</option><option>css=#newsalarie</option><option>//input[@id='newsalarie']</option><option>//div[@id='menu']/form/div[4]/div/input</option><option>//div[4]/div/input</option></datalist></td><td>Bezancon</td>
+</tr>
+<tr><td>type</td><td>id=newlastname<datalist><option>id=newlastname</option><option>name=newlastname</option><option>css=#newlastname</option><option>//input[@id='newlastname']</option><option>//div[@id='menu']/form/div[4]/div[2]/input</option><option>//div[4]/div[2]/input</option></datalist></td><td>Felix</td>
+</tr>
+<tr><td>type</td><td>id=newlevel<datalist><option>id=newlevel</option><option>name=newlevel</option><option>css=#newlevel</option><option>//input[@id='newlevel']</option><option>//div[@id='menu']/form/div[6]/div/input</option><option>//div[6]/div/input</option></datalist></td><td>0</td>
+</tr>
+<tr><td>type</td><td>id=newsalary<datalist><option>id=newsalary</option><option>name=newsalary</option><option>css=#newsalary</option><option>//input[@id='newsalary']</option><option>//div[@id='menu']/form/div[6]/div[2]/input</option><option>//div[6]/div[2]/input</option></datalist></td><td>10000</td>
+</tr>
+<tr><td>clickAt</td><td>name=OP<datalist><option>name=OP</option><option>css=input[name="OP"]</option><option>//input[@name='OP']</option><option>//div[@id='menu']/form/div[7]/input</option><option>//div[7]/input</option></datalist></td><td>61,20</td>
+</tr>
+<tr><td>verifyText</td><td>css=div.alert<datalist><option>css=div.alert</option><option>//div[@id='menu']/div[2]</option><option>//div[3]/div[2]</option></datalist></td><td>Le matricule est obligatoire</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Reset</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://localhost:8085/salarie<datalist><option>http://localhost:8085/salarie</option></datalist></td><td></td>
+</tr>
+<tr><td>clickAt</td><td>//div[@id='piedpage']/div/a[2]/img<datalist><option>//div[@id='piedpage']/div/a[2]/img</option><option>//a[2]/img</option></datalist></td><td>11,10</td>
+</tr>
+<tr><td>verifyText</td><td>css=div.info<datalist><option>css=div.info</option><option>//div[@id='menu']/div[2]</option><option>//div[3]/div[2]</option></datalist></td><td>Les salariés ont été initialisés à partir du jeu de tests</td>
+</tr>
+</tbody></table>
+</body>
+</html>
